@@ -1,6 +1,5 @@
 import days.*;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class AdventOfCode {
