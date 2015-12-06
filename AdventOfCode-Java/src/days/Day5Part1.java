@@ -1,8 +1,7 @@
 package days;
 
-import lib.MessageRemoveLinebreak;
+import lib.ReadInput;
 
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,12 +9,8 @@ public class Day5Part1 {
 
     public Day5Part1() {
 
-        Scanner scanner = new Scanner(System.in);
-        new MessageRemoveLinebreak();
-        System.out.print("Input: ");
-        String input = scanner.next();
-
-        String[] splitInput = input.split(",");
+        ReadInput readInput = new ReadInput();
+        String[] splitInput = readInput.input.split(";");
         int answer = 0;
 
         for (int i = 0; i < splitInput.length; i++) {

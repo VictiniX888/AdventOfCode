@@ -1,8 +1,9 @@
 package days;
 
+import lib.ReadInput;
+
 import java.awt.*;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 public class Day3Part2 {
@@ -17,11 +18,8 @@ public class Day3Part2 {
 
         pointSet.add(pointSanta.getLocation());
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Input: ");
-        String input = scanner.next();
-
-        char[] charArray = input.toCharArray();
+        ReadInput readInput = new ReadInput();
+        char[] charArray = readInput.input.toCharArray();
 
         //Santa
         for (int i = 0; i < charArray.length; i+=2) {

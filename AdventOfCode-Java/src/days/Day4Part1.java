@@ -1,18 +1,16 @@
 package days;
 
+import lib.ReadInput;
+
 import javax.xml.bind.DatatypeConverter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Scanner;
 
 public class Day4Part1 {
 
     public Day4Part1() {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Input: ");
-        String input = scanner.next();
-
+        ReadInput readInput = new ReadInput();
         byte[] result;
         int number = 0;
         byte[] byteInput;
@@ -21,7 +19,7 @@ public class Day4Part1 {
 
         for (int i = 0; i < Long.MAX_VALUE; i++) {
             number = number + 1;
-            String inputNumber = input + number;
+            String inputNumber = readInput.input + number;
 
             try {
                 md5 = MessageDigest.getInstance("MD5");

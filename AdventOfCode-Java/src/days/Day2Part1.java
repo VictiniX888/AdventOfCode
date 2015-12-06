@@ -1,8 +1,6 @@
 package days;
 
-import lib.MessageRemoveLinebreak;
-
-import java.util.Scanner;
+import lib.ReadInput;
 
 public class Day2Part1 {
 
@@ -11,11 +9,8 @@ public class Day2Part1 {
 
         int answer = 0;
 
-        Scanner scanner = new Scanner(System.in);
-        new MessageRemoveLinebreak();
-        System.out.print("Input: ");
-        String input = scanner.next();
-        String[] splitInput = input.split(",");
+        ReadInput readInput = new ReadInput();
+        String[] splitInput = readInput.input.split(";");
         for (int i = 0; i < splitInput.length; i++) {
             String[] splitSortedInput = splitInput[i].split("x");
             int l = Integer.parseInt(splitSortedInput[0]);
