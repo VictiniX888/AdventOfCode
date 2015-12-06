@@ -1,2 +1,2 @@
 # AdventOfCode
-Solutions for adventofcode.com in Java.
+Solutions for [Advent Of Code](http://adventofcode.com/) in Java.
