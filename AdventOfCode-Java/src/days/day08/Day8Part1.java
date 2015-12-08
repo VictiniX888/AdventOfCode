@@ -18,7 +18,7 @@ public class Day8Part1 {
 
             newInput = newInput.replaceAll("\\\\{2}", "a");
             newInput = newInput.replaceAll("\\\\\"", "a");
-            newInput = newInput.replaceAll("\\\\x..", "a");
+            newInput = newInput.replaceAll("\\\\x\\w\\w", "a");
             newInput = newInput.replaceAll("\"", "");
 
             oldInput += splitInput[i].length();
