@@ -40,5 +40,9 @@ public class AdventOfCode {
             if(part == 1) new Day7Part1();
             if(part == 2) new Day7Part2();
         }
+        if(day == 8) {
+            if(part == 1) new Day8Part1();
+            if(part == 2) new Day8Part2();
+        }
     }
 }
