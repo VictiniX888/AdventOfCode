@@ -1,4 +1,4 @@
-package days;
+package days.day04;
 
 import lib.ReadInput;
 
@@ -6,9 +6,9 @@ import javax.xml.bind.DatatypeConverter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Day4Part1 {
+public class Day4Part2 {
 
-    public Day4Part1() {
+    public Day4Part2() {
 
         ReadInput readInput = new ReadInput();
         byte[] result;
@@ -31,8 +31,8 @@ public class Day4Part1 {
             byteInput = inputNumber.getBytes();
             result = md5.digest(byteInput);
             finalString = DatatypeConverter.printHexBinary(result);
-            if(finalString.substring(0, 5).contains("00000")) {
-                System.out.println("Day 4 Part 1 answer: " + number);
+            if(finalString.substring(0, 6).contains("000000")) {
+                System.out.println("Day 4 Part 2 answer: " + number);
                 break;
             }
         }

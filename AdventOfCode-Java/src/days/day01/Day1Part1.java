@@ -1,16 +1,15 @@
-package days;
+package days.day01;
 
 import lib.ReadInput;
 
-public class Day1Part2 {
+public class Day1Part1 {
 
     private int answer;
 
-    public Day1Part2() {
+    public Day1Part1() {
 
         ReadInput readInput = new ReadInput();
         char[] charArray = readInput.input.toCharArray();
-        answer = 1;
 
         for (int i = 0; i < charArray.length; i++) {
             if(charArray[i] == '(') {
@@ -19,11 +18,8 @@ public class Day1Part2 {
             else if(charArray[1] == ')') {
                 answer--;
             }
-
-            if(answer == -1) {
-                System.out.println("Day 1 Part 2 answer: " + i);
-                break;
-            }
         }
+
+        System.out.println("Day 1 Part 1 answer: " + answer);
     }
 }

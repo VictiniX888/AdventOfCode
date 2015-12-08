@@ -1,10 +1,10 @@
-package days;
+package days.day06;
 
 import lib.ReadInput;
 
-public class Day6Part1 {
+public class Day6Part2 {
 
-    public Day6Part1() {
+    public Day6Part2() {
 
         ReadInput readInput = new ReadInput();
         int answer = 0;
@@ -28,13 +28,11 @@ public class Day6Part1 {
 
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
-                if(ints[i][j] == 1) {
-                    answer++;
-                }
+                answer += ints[i][j];
             }
         }
 
-        System.out.println("Day 6 Part 1 answer: " + answer);
+        System.out.println("Day 6 Part 2 answer: " + answer);
     }
 
     public void turnOn(String s, int[][] ints) {
@@ -52,7 +50,7 @@ public class Day6Part1 {
 
         for (int j = xStart; j <= xEnd; j++) {
             for (int k = yStart; k <= yEnd; k++) {
-                ints[j][k] = 1;
+                ints[j][k]++;
             }
         }
     }
@@ -72,12 +70,7 @@ public class Day6Part1 {
 
         for (int j = xStart; j <= xEnd; j++) {
             for (int k = yStart; k <= yEnd; k++) {
-                if(ints[j][k] == 0) {
-                    ints[j][k] = 1;
-                }
-                else {
-                    ints[j][k] = 0;
-                }
+                ints[j][k] += 2;
             }
         }
     }
@@ -97,8 +90,14 @@ public class Day6Part1 {
 
         for (int j = xStart; j <= xEnd; j++) {
             for (int k = yStart; k <= yEnd; k++) {
-                ints[j][k] = 0;
+                if(ints[j][k] != 0) {
+                    ints[j][k]--;
+                }
+                else {
+                    ints[j][k] = 0;
+                }
             }
         }
     }
 }
+

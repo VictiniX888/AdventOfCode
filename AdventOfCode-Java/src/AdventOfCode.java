@@ -1,4 +1,19 @@
-import days.*;
+import days.day01.Day1Part1;
+import days.day01.Day1Part2;
+import days.day02.Day2Part1;
+import days.day02.Day2Part2;
+import days.day03.Day3Part1;
+import days.day03.Day3Part2;
+import days.day04.Day4Part1;
+import days.day04.Day4Part2;
+import days.day05.Day5Part1;
+import days.day05.Day5Part2;
+import days.day06.Day6Part1;
+import days.day06.Day6Part2;
+import days.day07.Day7Part1;
+import days.day07.Day7Part2;
+import days.day08.Day8Part1;
+import days.day08.Day8Part2;
 
 import java.util.Scanner;
 
