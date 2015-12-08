@@ -18,7 +18,7 @@ public class Day8Part2 {
 
             newInput = newInput.replaceAll("\\\\{2}", "aaaa");
             newInput = newInput.replaceAll("\\\\\"", "aaaa");
-            newInput = newInput.replaceAll("\\\\x\\w\\w", "aaaaa");
+            newInput = newInput.replaceAll("\\\\x[0-9a-f][0-9a-f]", "aaaaa");
             newInput = newInput.replaceAll("\"", "aa");
             newInput = "a" + newInput + "a";
 
