@@ -1,7 +1,5 @@
 package days.day09;
 
-import com.google.common.collect.Collections2;
-import com.google.common.primitives.Chars;
 import javafx.util.Pair;
 import lib.ReadInput;
 
