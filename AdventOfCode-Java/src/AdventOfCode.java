@@ -14,6 +14,8 @@ import days.day07.Day7Part1;
 import days.day07.Day7Part2;
 import days.day08.Day8Part1;
 import days.day08.Day8Part2;
+import days.day09.Day9Part1;
+import days.day09.Day9Part2;
 
 import java.util.Scanner;
 
@@ -58,6 +60,10 @@ public class AdventOfCode {
         if(day == 8) {
             if(part == 1) new Day8Part1();
             if(part == 2) new Day8Part2();
+        }
+        if(day == 9) {
+            if(part == 1) new Day9Part1();
+            if(part == 2) new Day9Part2();
         }
     }
 }
