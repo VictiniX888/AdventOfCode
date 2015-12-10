@@ -1,5 +1,5 @@
 .idea
 out
 *.iml
-.jar
-.zip
+*.jar
+*.zip
