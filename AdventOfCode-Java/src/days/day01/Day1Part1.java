@@ -15,7 +15,7 @@ public class Day1Part1 {
             if(charArray[i] == '(') {
                 answer++;
             }
-            else if(charArray[1] == ')') {
+            else if(charArray[i] == ')') {
                 answer--;
             }
         }
