@@ -11,8 +11,11 @@ public class Day20Part2 {
         int[] houses = new int[input/10];
 
         for (int i = 1; i < input / 10; i++) {
-            for (int j = i; j < i * 50 && j < input / 10; j += i) {
+            for (int j = i; j < input / 10; j += i) {
                 houses[j] += i * 11;
+                if(j == i * 50) {
+                    break;
+                }
             }
         }
 
