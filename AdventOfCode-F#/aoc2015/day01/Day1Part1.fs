@@ -1,7 +1,8 @@
-open System.IO
+open System
 
 let main() = 
-    let input = File.ReadAllText("D:/AdventOfCode/AdventOfCode-F#/aoc2015/day01/Day1Input.txt")
+    let path = Console.ReadLine()
+    let input = IO.File.ReadAllText(path)
     let mutable floor = 0
     for i = 0 to (input.Length-1) do
         if (input.Chars(i) = '(') then
