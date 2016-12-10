@@ -38,17 +38,7 @@ public class Day9Part2 {
     private static long decompress(int a, int b, String s) {
 
         long count = 0;
-        /* for (int j = marker[0].length() + marker[1].length() + 2; j < a + marker[0].length() + marker[1].length() + 2; j++) {
-            if(s.charAt(j) == '(') {
-                String marker2 = s.substring(j+1);
-                String[] marker2Arr = marker2.split("x|\\)");
-                count += decompress(Integer.parseInt(marker2Arr[0]), Integer.parseInt(marker2Arr[1]), marker2);
-                j += marker2Arr[0].length() + marker2Arr[1].length() + 2 + Integer.parseInt(marker2Arr[0]);
-            }
-            else {
-                count++;
-            }
-        } */
+
         if(s.contains("(")) {
             for (int i = 0; i < s.length(); i++) {
                 if (s.charAt(i) == '(') {
