@@ -19,29 +19,28 @@ fun main(args: Array<String>) {
     }
 }
 
-private fun getFurthestDistance(pointsA: Set<Pair<Int, Int>>, pointsB: Set<Pair<Int, Int>>): Int {
+private fun getFurthestDistance(pointsA: Set<Point>, pointsB: Set<Point>): Int {
 
     return pointsA.flatMap { p -> pointsB.map { getDistance(p, it) } }.max() ?: 0
 }
 
-private fun getDistance(pointA: Pair<Int, Int>, pointB: Pair<Int, Int>) = (pointA.first - pointB.first).abs() + (pointA.second - pointB.second).abs()
+private fun getDistance(pointA: Point, pointB: Point) = (pointA.x - pointB.x).abs() + (pointA.y - pointB.y).abs()
 
-private fun markers(instructions: List<String>): Pair<Set<Pair<Int, Int>>, Set<Pair<Int, Int>>> {
+private fun markers(instructions: List<String>): Pair<Set<Point>, Set<Point>> {
 
-    var x = 0
-    var y = 0
-    val markersA = mutableSetOf<Pair<Int, Int>>()
-    val markersB = mutableSetOf<Pair<Int, Int>>()
+    val coord = Point(0, 0)
+    val markersA = mutableSetOf<Point>()
+    val markersB = mutableSetOf<Point>()
 
     move@ for (s in instructions) {
         when(s) {
-            "Right" -> x++
-            "Left" -> x--
-            "Up" -> y++
-            "Down" -> y--
-            "A" -> markersA.add(Pair(x, y))
-            "B" -> markersB.add(Pair(x, y))
-            "Start" -> break@move
+            "Right"  -> coord.move(Direction.RIGHT)
+            "Left"   -> coord.move(Direction.LEFT)
+            "Up"     -> coord.move(Direction.UP)
+            "Down"   -> coord.move(Direction.DOWN)
+            "A"      -> markersA.add(coord.copy())
+            "B"      -> markersB.add(coord.copy())
+            "Start"  -> break@move
         }
     }
 
